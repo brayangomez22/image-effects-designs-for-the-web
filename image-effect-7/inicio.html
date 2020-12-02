@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>agrandando imagen con javascript</title>
+	<style>
+		.thumb{
+			width: 200px;
+			transition: 400ms all ease;
+			border:solid 5px;
+			border-color: #566573;
+		}
+
+		.grande{
+			width: 400px;
+		}
+
+		.pepe{
+			margin-bottom: 5px;
+		}
+
+		.brayan:hover{
+			color: #0F1CFC;
+		}
+
+	</style>
+</head>
+<body>
+	<form class="pepe">
+		<input type="button" value="cambio de tamaño" onclick="zoom();" class="brayan">
+	</form>
+
+ <img class="thumb" id="thumb" src="http://lorempixel.com/400/400/" width="400">
+
+	<script>
+		var zoom = function(){
+			var thumb = document.getElementById("thumb");
+
+			if (thumb.className == "thumb") {
+				thumb.className = "thumb grande";
+			}else{
+				thumb.className = "thumb";
+			}
+		}
+	</script>
+
+</body>
+</html>
